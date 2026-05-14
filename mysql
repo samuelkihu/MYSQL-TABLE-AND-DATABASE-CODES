@@ -1,0 +1,19 @@
+DROP DATABASE IF EXISTS trial;
+CREATE DATABASE trial;
+USE trial;
+drop database trial;
+CREATE TABLE trialone (
+    id INT AUTO_INCREMENT UNIQUE NOT NULL,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    date DATETIME NOT NULL
+);
+drop table trialone;
+
+INSERT INTO trialone (username, email, date) VALUES 
+("samuel kihu", "kihusamuel@gmail.com", NOW());
+INSERT INTO trialone (username, email, date) VALUES 
+("samuel mwai", "samuelkihu@gmail.com", NOW());
+SELECT * FROM trialone;
+select username,date from  trialone where id=1;
+select date from trialone where username="samuel kihu";
